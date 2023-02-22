@@ -7,7 +7,7 @@ function App() {
 
       <h1>Fahim Faysal Siyam</h1>
       <h2>I have Done This</h2>
-      <p>ALHAMDULILLAH</p>
+
     </div>
   );
 }
