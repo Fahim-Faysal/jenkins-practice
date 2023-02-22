@@ -3,16 +3,16 @@ pipeline{
     stages{
         stage('Code Fetch From Github'){
             steps{
-                git branch: "Main", url:"https://github.com/Fahim-Faysal/jenkins-practice.git"
+                git branch: "main", url:"https://github.com/Fahim-Faysal/jenkins-practice.git"
             }
         }
         stage('Install the Dependencies'){
-            stages{
+            steps{
                 sh "npm install"
             }
         }
-        stages("Docker Build"){
-            stages{
+        stage("Docker Build"){
+            steps{
                sh "docker-compose down"
                sh "docker-compose up -d --force-recreate --no-deps --build web"
             }
